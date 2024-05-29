@@ -40,4 +40,23 @@
 		</dependency>
        
     </dependencies>
+    
+    <build>
+		<plugins>
+			<!-- Compilador do Maven -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.2</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.2</version>
+			</plugin>
+		</plugins>
+	</build>
 </project>
