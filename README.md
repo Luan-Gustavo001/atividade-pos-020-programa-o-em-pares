@@ -1,1 +1,1 @@
-# atividade-pos-020-programa-o-em-pares
+# atividade-pos-020-programação-em-pares
