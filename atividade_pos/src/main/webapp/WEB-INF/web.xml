@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!-- Configurações do Servlet -->
+    <servlet>
+        <servlet-name>MeuServlet</servlet-name>
+        <servlet-class>com.example.MeuServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MeuServlet</servlet-name>
+        <url-pattern>/meu-servlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Configurações do Listener (se necessário) -->
+    <!-- ... -->
+
+    <!-- Configurações de filtro (se necessário) -->
+    <!-- ... -->
+
+    <!-- Configurações de contexto (se necessário) -->
+    <!-- ... -->
+
+</web-app>
