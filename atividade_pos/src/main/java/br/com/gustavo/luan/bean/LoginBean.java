@@ -13,20 +13,22 @@ import lombok.Setter;
 
 @SuppressWarnings("serial")
 @Named("MBLogin")
-@SessionScoped
 public class LoginBean {
-	@Getter @Setter	
-	private Usuario usuario;
+	
     
-
-    // Método de Login
-    public String login() {
-        if("admin".equals(usuario.getUsuario()) && "admin".equals(usuario.getSenha())) {
-            return "home?faces-redirect=true"; // Sucesso: redirecionar para a página inicial
-        } else {
-            FacesContext.getCurrentInstance().addMessage(null,
-                new FacesMessage(FacesMessage.SEVERITY_ERROR, "Login falhou", "Usuário ou senha incorretos"));
-            return "login"; // Falha: permanecer na página de login
-        }
-    }
+	public String Login(Usuario usuarioLogin) {
+		Usuario usuario = new Usuario();
+			Boolean usuarioIgual, senhaIgual;
+			usuarioIgual = usuario.getUsuario().equals(usuarioLogin.getUsuario());
+			senhaIgual = usuario.getSenha().equals(usuarioLogin.getSenha());
+			
+			if(usuarioIgual && senhaIgual) {
+				return "home?faces-redirect=true"; //Sucesso: redirecionar para a página inicial
+			}else {
+				FacesContext.getCurrentInstance().addMessage(null,
+		                new FacesMessage(FacesMessage.SEVERITY_ERROR, "Login falhou", "Usuário ou senha incorretos"));
+		            return "login"; // Falha: permanecer na página de login
+			}
+	}
+	
 }

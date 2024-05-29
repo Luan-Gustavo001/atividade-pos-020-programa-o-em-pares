@@ -17,10 +17,39 @@ public class Usuario {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Getter @Setter
     @Column(nullable = false, unique = true)
     private String usuario;
-    @Getter @Setter
     @Column(nullable = false)
     private String senha;
+    private String nomeUsuario;
+    
+    
+    @Getter @Setter
+    private int nivelUsuario; // 0 - Normal ; 1 - Administrador
+    
+	public Long getId() {
+		return id;
+	}
+	
+	public String getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+	public String getSenha() {
+		return senha;
+	}
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+	public String getNomeUsuario() {
+		return nomeUsuario;
+	}
+	public void setNomeUsuario(String nomeUsuario) {
+		this.nomeUsuario = nomeUsuario;
+	}
+
+	
+    
 }

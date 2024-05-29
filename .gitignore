@@ -52,3 +52,6 @@ Thumbs.db
 .vscode/
 *.diff
 *.patch
+
+#target 
+/target/
