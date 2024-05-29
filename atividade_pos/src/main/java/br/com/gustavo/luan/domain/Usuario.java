@@ -19,7 +19,7 @@ public class Usuario {
     private Long id;
     @Getter @Setter
     @Column(nullable = false, unique = true)
-    private String usuaio;
+    private String usuario;
     @Getter @Setter
     @Column(nullable = false)
     private String senha;

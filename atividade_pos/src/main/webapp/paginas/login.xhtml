@@ -15,7 +15,7 @@
                 
 	                    <p:inputText placeholder="Usuario" value="#{MBLogin.usuario}" required="true" requiredMessage="O campo Usuario é obrigatório"/>
 	                    
-	                    <p:inputText type="password" placeholder="Senha" value="#{MBLogin.senha}"
+	                    <p:inputText type="password" placeholder="Senha" value="#{MBLogin.usuario.senha}"
 	                    	required="true" requiredMessage="O campo Senha é obrigatório"/>                
 	                    
 	                    <p:commandButton value="Entrar / Logar" icon="fa fa-sign-in" actionListener="#{MBLogin.login}" update="growl"/>
